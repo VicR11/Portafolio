@@ -4,6 +4,7 @@
     box-sizing: border-box;
    
   }
+
 h1{
     font-family: 'Albert Sans', sans-serif;
     font-size: 40px;
@@ -31,6 +32,7 @@ li{
     font-size: 14px;
 }
 
+
 section{
     margin-bottom: 8rem;
 }
@@ -57,8 +59,20 @@ header{
     
 }
 
+body.modo-oscuro,
+body.modo-oscuro header {
+    /*background-color: #071952;*/
+    background-color: #111F44;
+}
+
+
+body.modo-oscuro :is(h1, h2, h3, p, a, .time) {
+    color: #FFFFFF;
+  }
+
+
 header img{
-    height: 100%;
+    height: 80%;
     transition: transform 0.3s ease;
 }
 
@@ -87,6 +101,23 @@ header p::after{
 header p:hover::after {
     background-color: #CF3DCE;
     transform: scaleX(1.1);
+  }
+  i.fa-bars {
+    color: #8F43EE;
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  i.fa-xmark{
+    color: #8F43EE;
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
 nav ul{ 
@@ -147,10 +178,11 @@ ul li a:hover::after {
 }
 
 .container-inicio .redes{
+    
     display: flex;
     flex-direction: column;
     position: fixed;
-    right: 1rem; 
+    left: 2rem; 
 }
 
 .container-inicio .redes i{
@@ -163,6 +195,32 @@ ul li a:hover::after {
     transform: scale(1.1);
 }
 
+#boton-toggle-claro{
+    color:#8F43EE;
+    background-color: #FFFFFF;
+    border: none;
+    position: fixed;
+    top: 6rem;
+    right: 2rem;
+}
+
+#boton-toggle-oscuro{
+    color: #CF3DCE;
+    display: none;
+    background-color: #111F44;
+    border: none;
+    position: fixed;
+    top: 6rem;
+    right: 2rem;
+}
+
+body.modo-oscuro #boton-toggle-claro{
+    display: none;
+}
+
+body.modo-oscuro #boton-toggle-oscuro{
+    display: block;
+}
 
 #acercaDeMi{
     border-radius: 20px;
@@ -216,6 +274,7 @@ ul li a:hover::after {
 }
 
 #proyectos .card-image{
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -380,7 +439,40 @@ footer i:hover{
     transform: scale(1.1);
 }
 
+
+
+
 @media (max-width: 768px) {
+    nav{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        background-color: #fff;  
+        padding: 1rem 2rem;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+    nav.active{
+        display: flex;
+        
+    }
+    i.fa-bars{
+        display: flex;
+    }
+
+    i.fa-bars.active{
+        display: none;   
+    }
+    i.fa-xmark.active{
+        display: block;
+    }
+    .container-inicio .redes{
+        display: none;
+    }
     #experiencia .card {
       flex-direction: column;
       width: 90%;
