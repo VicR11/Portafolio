@@ -60,6 +60,7 @@ header{
 }
 
 body.modo-oscuro,
+body.modo-oscuro nav,
 body.modo-oscuro header {
     /*background-color: #071952;*/
     background-color: #111F44;
@@ -92,7 +93,7 @@ header p::after{
     left: 0;
     bottom: 0;
     height: 3px;
-    width: 90%; /* Puedes jugar con el ancho */
+    width: 90%; 
     background-color: #8F43EE;
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -142,7 +143,7 @@ nav ul li a::after{
     left: 0;
     bottom: 0;
     height: 3px;
-    width: 90%; /* Puedes jugar con el ancho */
+    width: 90%; 
     background-color: #8F43EE;
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -237,29 +238,29 @@ body.modo-oscuro #boton-toggle-oscuro{
     transform: scale(1.1);
 }
 
-#proyectos, #experiencia, #habilidades{
+#proyectos, #experiencia, #habilidades, #contacto{
     text-align: center;
 }
 
-#proyectos > h2, #experiencia > h2, #habilidades > h2{
+#proyectos > h2, #experiencia > h2, #habilidades > h2, #contacto > h2{
     position: relative;
     display: inline-block;
    
 }
  
-#proyectos h2::after,#experiencia h2::after,#habilidades h2::after{
+#proyectos h2::after,#experiencia h2::after,#habilidades h2::after,#contacto h2::after{
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     height: 3px;
-    width: 40%; /* Puedes jugar con el ancho */
+    width: 40%; 
     background-color: #8F43EE;
     transform-origin: left;
     transition: transform 0.3s ease;
 }
 
-#proyectos h2:hover::after, #experiencia h2:hover::after, #habilidades h2:hover::after{
+#proyectos h2:hover::after, #experiencia h2:hover::after, #habilidades h2:hover::after, #contacto h2:hover::after{
     background-color: #CF3DCE;
     transform: scaleX(2);
 
@@ -388,7 +389,7 @@ body.modo-oscuro #boton-toggle-oscuro{
 }
 
 #habilidades{  
-    margin: 0 auto;
+    margin: 0 auto 8rem auto;
     width: 70%;
 }
 
@@ -444,7 +445,7 @@ footer i:hover{
 
 @media (max-width: 768px) {
     nav{
-        display: none;
+        display: none;   
         flex-direction: column;
         position: absolute;
         top: 5rem;
@@ -452,13 +453,12 @@ footer i:hover{
         background-color: #fff;  
         padding: 1rem 2rem;
     }
-
     nav ul{
         flex-direction: column;
     }
     nav.active{
         display: flex;
-        
+       
     }
     i.fa-bars{
         display: flex;
