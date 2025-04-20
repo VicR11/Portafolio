@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+
   }
 
 h1{
@@ -302,7 +302,8 @@ body.modo-oscuro #boton-toggle-oscuro{
 #proyectos .card-content{
     flex: 1 1 40%;
     padding: 1rem;
-    text-align: left;
+    object-fit: contain;
+    text-align: justify;
 }
 
 #proyectos .card-content ul{
@@ -472,6 +473,10 @@ footer i:hover{
     }
     .container-inicio .redes{
         display: none;
+    }
+
+    #proyectos .card{
+        width: 100%;
     }
     #experiencia .card {
       flex-direction: column;
