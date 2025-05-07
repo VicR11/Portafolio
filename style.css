@@ -270,7 +270,7 @@ body.modo-oscuro #boton-toggle-oscuro{
 #proyectos .card{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 2rem auto;
     text-align: center;
     width: 70%;
 }
@@ -295,6 +295,8 @@ body.modo-oscuro #boton-toggle-oscuro{
 
 
 #proyectos .card-image img {
+    width: 390px;
+    height: 260px;
     border-radius: 20px;
     max-height: 100%;
     max-width: 100%;
@@ -304,7 +306,7 @@ body.modo-oscuro #boton-toggle-oscuro{
     flex: 1 1 40%;
     padding: 1rem;
     object-fit: contain;
-    text-align: left;
+    text-align: justify;
 }
 
 #proyectos .card-content ul{
@@ -428,8 +430,8 @@ footer{
     text-align: center;
 }
 
-footer p{
-    font-size: 14px;
+footer p, .cv-descarga{
+    font-size: 15px;
     margin: 0;
 }
 
