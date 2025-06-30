@@ -284,13 +284,8 @@ body.modo-oscuro #boton-toggle-oscuro{
     width: 100%;
     max-width: 500px;
     flex: 1 1 60%;
-    transition: transform 0.3s ease;
-    transform-origin: right;
-}
-
-#proyectos .card-image:hover{
-    /*transform: scale(1.1);*/
-    transform:translateX(-20px) scale(1.1);
+    
+  
 }
 
 
@@ -301,7 +296,13 @@ body.modo-oscuro #boton-toggle-oscuro{
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+    transition: transform 0.3s ease;
   }
+
+#proyectos .card-image img:hover{
+    transform: scale(1.1);
+    
+}
 #proyectos .card-content{
     flex: 1 1 40%;
     padding: 1rem;
